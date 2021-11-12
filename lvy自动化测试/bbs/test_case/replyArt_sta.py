@@ -14,12 +14,12 @@ class replyArtTest(myunit.myTest):
         function.insert_img(self.driver, 'reply_emply.jpg')
         po = replyArt(self.driver)
         self.assertEqual(po.error_hint(),'您的帖子长度不符合要求。 当前长度: 0 字节 系统限制: 10 到 10000 字节')
-    # def test_reply2(self):
-    #     body = '很羡慕这样的生活啊'
-    #     self.reply_art_verify(body)
-    #     time.sleep(1)
-    #     self.assertIn(body,self.driver.page_source)
-    #     function.insert_img(self.driver, 'reply_art.jpg')
+    def test_reply2(self):
+        body = '很羡慕这样的生活啊'
+        self.reply_art_verify(body)
+        time.sleep(1)
+        self.assertIn(body,self.driver.page_source)
+        function.insert_img(self.driver, 'reply_art.jpg')
 
 if __name__=='__main__':
     unittest.main()
